@@ -1,0 +1,7 @@
+fastapi
+pinecone
+pydantic
+pypdf
+python-dotenv
+python-multipart
+uvicorn
