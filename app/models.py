@@ -1,3 +1,5 @@
+from typing import List, Optional
+
 from pydantic import BaseModel, Field, field_validator
 
 
@@ -6,7 +8,7 @@ class PdfUploadResponse(BaseModel):
     page_count: int
     text: str
     char_count: int
-    embedding: list[float]
+    embedding: List[float]
     namespace: str
     chunk_count: int
 
@@ -26,16 +28,16 @@ class RetrieveDocRequest(BaseModel):
 
 
 class RetrieveDocMatch(BaseModel):
-    id: str | None = None
-    score: float | None = None
+    id: Optional[str] = None
+    score: Optional[float] = None
     text: str
 
 
 class RetrieveDocResponse(BaseModel):
-    texts: list[str]
-    matches: list[RetrieveDocMatch]
+    texts: List[str]
+    matches: List[RetrieveDocMatch]
     namespace: str
 
 
 class RetrieveNamespaceResponse(BaseModel):
-    namespaces: list[str]
+    namespaces: List[str]
