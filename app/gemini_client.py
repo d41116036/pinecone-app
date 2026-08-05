@@ -21,7 +21,7 @@ def _load_environment() -> None:
 _load_environment()
 logger = logging.getLogger(__name__)
 
-DEFAULT_GEMINI_APP_BASE_URL = "http://54.204.110.222"
+DEFAULT_GEMINI_APP_BASE_URL = "http://54.204.110.222/gemini"
 
 
 class GeminiConfigurationError(Exception):
